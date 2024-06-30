@@ -1,39 +1,31 @@
 /* eslint-disable no-underscore-dangle */
-
 class Currency {
   constructor(code, name) {
-    this._code = code;
-    this._name = name;
+    this.code = code;
+    this.name = name;
   }
 
+  // code
   get code() {
     return this._code;
   }
 
   set code(code) {
-    if (typeof code === 'string') {
-      this._code = code;
-    } else {
-      throw new TypeError('Code must be a string');
-    }
+    if (typeof code === 'string') this._code = code;
   }
 
+  // name
   get name() {
     return this._name;
   }
 
   set name(name) {
-    if (typeof name === 'string') {
-      this._name = name;
-    } else {
-      throw new TypeError('Name must be a string');
-    }
+    if (typeof name === 'string') this._name = name;
   }
 
   displayFullCurrency() {
-    return `${this._name} (${this._code})`;
+    return `${this.name} (${this.code})`;
   }
 }
 
 export default Currency;
-
