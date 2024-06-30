@@ -1,7 +1,3 @@
-export default function setFromArray(arr) {
-  const set = new Set();
-  arr.forEach(item => {
-    set.add(item);
-  });
-  return set;
+export default function setFromArray(arg) {
+  return new Set(arg);
 }
