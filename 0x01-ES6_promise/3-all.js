@@ -4,7 +4,11 @@ export default function handleProfileSignup() {
   return Promise
     .all([uploadPhoto(), createUser()])
     .then(([photoResponse, userResponse]) => {
-      console.log(`${photoResponse.body} ${userResponse.firstName} ${userResponse.lastName}`);
+      if (photoResponse && userResponse) {
+        console.log(`${photoResponse.body} ${userResponse.firstName} ${userResponse.lastName}`);
+      } else {
+        console.error("One or more promises were rejected");
+      }
     })
     .catch((error) => {
       console.error("Signup system offline");
