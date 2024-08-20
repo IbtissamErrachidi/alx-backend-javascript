@@ -32,9 +32,12 @@ function countStudents(filePath) {
       for (const field in studentsByField) {
         if (Object.prototype.hasOwnProperty.call(studentsByField, field)) {
           const list = studentsByField[field].join(', ');
-          result += `\nNumber of students in ${field}: ${studentsByField[field].length}. List: ${list}`;
+          result += `Number of students in ${field}: ${studentsByField[field].length}. List: ${list}\n`;
         }
       }
+
+      result = result.trimEnd();
+
       resolve(result);
     });
   });
