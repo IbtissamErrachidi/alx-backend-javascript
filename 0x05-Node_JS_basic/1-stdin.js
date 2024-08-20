@@ -5,7 +5,7 @@ process.stdin.on('readable', () => {
   const name = process.stdin.read();
   if (name !== null && name.trim() !== '') {
     process.stdout.write(`Your name is: ${name.trim()}\n`);
-    process.stdin.end();  // Terminer l'entrée après avoir capturé le nom
+    process.stdin.end();
   }
 });
 
