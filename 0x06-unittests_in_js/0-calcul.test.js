@@ -2,7 +2,7 @@ const assert = require('assert');
 const { it, describe } = require("mocha");
 const calculateNumber = require('./0-calcul.js');
 
-describe('calculateNumber', function() {
+describe('calculateNumber()', function() {
   it('checking if numbers round', function() {
     const res = calculateNumber(1, 3);
     assert.strictEqual(res, 4);
