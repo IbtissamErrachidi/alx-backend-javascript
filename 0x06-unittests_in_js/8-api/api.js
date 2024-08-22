@@ -1,9 +1,9 @@
 const express = require('express');
 
-const app = express();  // Correction de l'erreur
-const port = 7865;  // Correction du port
+const app = express();
+const port = 7865;
 
-app.get('/', (req, res) => {  // Correction de "rep" en "res" et "sed" en "send"
+app.get('/', (req, res) => {
   res.send('Welcome to the payment system');
 });
 
